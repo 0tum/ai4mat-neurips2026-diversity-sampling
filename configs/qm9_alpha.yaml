@@ -1,0 +1,11 @@
+dataset: qm9
+target: alpha
+# data/qm9/splits/<name>: property split on alpha, Murcko scaffold, ECFP cluster
+splits: [property_alpha, scaffold, cluster]
+# <model>_<input>
+conditions: [chemprop_smiles, krr_rdkit2d, mlp_ecfp]
+train_sizes: [100, 300, 1000, 3000, 10000]
+seeds: [0, 1, 2, 3, 4]
+# Model settings; omitted keys take the defaults in src/divsample/models.py.
+params:
+  seed: 123

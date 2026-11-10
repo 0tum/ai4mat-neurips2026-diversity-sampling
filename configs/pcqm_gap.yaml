@@ -1,0 +1,9 @@
+dataset: pcqm
+target: gap
+# property split on gap with the full 1.48M pool and a 150k subsample of it
+splits: [property_gap_1.5M, property_gap_150k]
+conditions: [chemprop_smiles, krr_rdkit2d, mlp_ecfp]
+train_sizes: [100, 300, 1000, 3000, 10000]
+seeds: [0, 1, 2, 3, 4]
+params:
+  seed: 123
